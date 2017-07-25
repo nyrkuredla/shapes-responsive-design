@@ -94,6 +94,11 @@ main li p{
 /**** 1. TODO: Style the h4 in each shape list item ********/
 /***********************************************************/
 
+main li h4 {
+  text-align: center;
+  background-color: #000;
+}
+
 main li img{
     border: 1px solid rgba( 0, 0, 0, 0.25 );
     padding: 20px;
@@ -172,6 +177,15 @@ main li img{
     /**** 2. TODO: Style the list items to create 2 columns ****/
     /***********************************************************/
 
+    main ul {
+      flex-flow: row wrap;
+    }
+
+    main ul li {
+      max-width: 48%;
+      flex-grow: 1;
+    }
+
     #content_filter form{
         display: flex;
         flex-direction: row;
@@ -187,7 +201,30 @@ main li img{
     /**** 3. TODO: Style the form and fieldset             *****/
     /****    to create a 2 column layout                   *****/
     /***********************************************************/
+
+    #content_filter form {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #content_filter h3 {
+      max-width: 100%;
+      flex-grow: 2;
+    }
+
+    #content_filter form fieldset {
+      max-width: 49%;
+      flex-grow: 1;
+    }
+
+    #content-filter form input {
+      align-self: flex-end;
+      max-width: 49%;
+    }
+
 }
+
+
 
 /****  TABLET STYLES THAT SHOULDN'T    *****/
 /****  CARRY OVER TO THE DESKTOP SIZE  *****/
@@ -202,6 +239,32 @@ main li img{
         width: 48%;
         margin-left:  52%;
     }
+
+    #logo {
+      order: 1;
+    }
+
+    #main_nav {
+      order: 2;
+    }
+
+    #site_header {
+      order: 3;
+    }
+
+    main {
+      order: 5;
+    }
+
+    #content_filter {
+      order: 4;
+    }
+
+    #site_footer {
+      order: 6;
+    }
+
+
 }
 
 /****  DESKTOP STYLES  *****/
@@ -239,7 +302,7 @@ main li img{
     /**** 7. TODO: Style the list items to create      ********************/
     /****    the 3 column grid of images               ********************/
     /**********************************************************************/
-    
+
     #content_filter{
         flex: 0 1 24%;
     }
@@ -254,9 +317,3 @@ main li img{
         flex: 2 0 100%;
     }
 }
-
-
-
-
-
-
